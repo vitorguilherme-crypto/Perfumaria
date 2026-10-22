@@ -1,0 +1,636 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS - LINHA UNISSEX
+   ========================================= */
+
+:root {
+    --bg-dark-main: #020a11;
+    --bg-card-dark: #05131f;
+    --bg-beige: #cbb898;
+    --text-gold: #d8ad63;
+    --text-light: #f2e6d2;
+    --text-muted: #a3b0bc;
+    --text-dark: #121212;
+    --border-gold: rgba(216, 173, 99, 0.35);
+    --font-serif: Georgia, "Times New Roman", serif;
+    --font-sans: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark-main);
+    color: var(--text-light);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+}
+
+/* =========================================
+   1. HERO SECTION
+   ========================================= */
+.hero-unissex {
+    position: relative;
+    width: 100%;
+    height: clamp(520px, 74vh, 700px);
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(
+        90deg, 
+        rgba(2, 10, 17, 0.88) 0%, 
+        rgba(2, 10, 17, 0.45) 40%, 
+        transparent 70%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.subtitulo-categoria, .subtitulo-ouro {
+    color: var(--text-gold);
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.hero-content h1 {
+    color: var(--text-light);
+    font-family: var(--font-serif);
+    font-size: clamp(44px, 5vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    margin-bottom: 24px;
+}
+
+.hero-content h1 span {
+    color: var(--text-gold);
+    font-style: italic;
+}
+
+.descricao-hero {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 440px;
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    border: 1px solid var(--text-gold);
+    color: var(--text-gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    background: transparent;
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    background-color: var(--text-gold);
+    color: var(--bg-dark-main);
+}
+
+.btn-outline .seta {
+    transition: transform 0.3s ease;
+}
+
+.btn-outline:hover .seta {
+    transform: translateX(5px);
+}
+
+.hero-counter {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(242, 230, 210, 0.4);
+    font-size: 12px;
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+    z-index: 2;
+}
+
+/* =========================================
+   2. FAMÍLIAS OLFATIVAS (IGUAL À LINHA MASCULINA)
+   ========================================= */
+.familias-unissex {
+    position: relative;
+    z-index: 2;
+    background-color: #030e17;
+    border-top: 1px solid var(--border-gold);
+    border-bottom: 1px solid var(--border-gold);
+}
+
+.familias-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+}
+
+.familia-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 30px 10px;
+}
+
+/* Divisória vertical entre os itens */
+.familia-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background: rgba(216, 173, 99, 0.2);
+}
+
+.familia-item svg {
+    width: 44px;
+    height: 44px;
+    color: var(--text-gold);
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.familia-item span {
+    color: var(--text-gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: transform 0.35s ease;
+}
+
+/* Efeito ao passar o mouse */
+.familia-item {
+    cursor: pointer;
+}
+
+.familia-item:hover svg {
+    transform: translateY(-6px) scale(1.08);
+    filter: drop-shadow(0 4px 8px rgba(216, 173, 99, 0.35));
+}
+
+.familia-item:hover span {
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   3. GRID DE FRAGRÂNCIAS
+   ========================================= */
+.fragrancias-secao {
+    padding: 80px 8%;
+    background-color: var(--bg-dark-main);
+}
+
+.fragrancias-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.fragrancias-top h2 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.link-ver-todas {
+    color: var(--text-gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.link-ver-todas:hover {
+    color: var(--text-light);
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card-produto {
+    background-color: var(--bg-card-dark);
+    border: 1px solid rgba(216, 173, 99, 0.25);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+    border-color: var(--text-gold);
+}
+
+.card-thumb {
+    width: 100%;
+    aspect-ratio: 1.35 / 1;
+    overflow: hidden;
+    background-color: #030d17;
+}
+
+.card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.card-produto:hover .card-thumb img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    font-family: var(--font-serif);
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text-light);
+}
+
+.familia-tag {
+    color: var(--text-gold);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.card-body p {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-footer strong {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.btn-circulo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(216, 173, 99, 0.4);
+    color: var(--text-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.btn-circulo:hover {
+    background-color: var(--text-gold);
+    color: var(--bg-dark-main);
+}
+
+/* =========================================
+   4. DESTAQUE SPLIT (IMAGEM + TEXTURA BEGE)
+   ========================================= */
+.banner-destaque-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    background-color: var(--bg-beige);
+    color: var(--text-dark);
+}
+
+.split-col-img {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+}
+
+.split-col-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Coluna do texto com imagem de fundo (unissex.jpeg) */
+.split-col-texto {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    min-height: 480px;
+}
+
+.split-texto-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    display: block;
+}
+
+.split-texto-conteudo {
+    position: relative;
+    z-index: 1;
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tag-pequena {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #4a3e2e;
+    margin-bottom: 16px;
+}
+
+.split-col-texto h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(40px, 4.5vw, 60px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #1a1611;
+}
+
+.split-col-texto h2 span {
+    font-style: italic;
+    color: #5c4b35;
+}
+
+.split-col-texto p {
+    color: #3b3328;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 420px;
+}
+
+.btn-dark-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    border: 1px solid #1a1611;
+    color: #1a1611;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-dark-outline:hover {
+    background-color: #1a1611;
+    color: var(--bg-beige);
+}
+
+/* =========================================
+   5. SEÇÃO DUPLA (DUAS PERSONALIDADES)
+   ========================================= */
+.secao-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    background-color: var(--bg-dark-main);
+    border-bottom: 1px solid var(--border-gold);
+}
+
+.dupla-card {
+    padding: 70px 12%;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card-dark);
+}
+
+.dupla-conteudo {
+    max-width: 360px;
+}
+
+.tag-dupla {
+    color: var(--text-gold);
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.dupla-conteudo h2 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.dupla-conteudo p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.dupla-imagem-central {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.dupla-imagem-central img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   6. BANNER FINAL
+   ========================================= */
+.banner-final-unissex {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner-final-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.banner-final-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-final-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 10, 17, 0.7);
+}
+
+.banner-final-conteudo {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.arco-luminoso {
+    padding: 40px 60px;
+    border-radius: 50% / 20%;
+    border: 1px solid rgba(216, 173, 99, 0.3);
+    background: radial-gradient(ellipse at center, rgba(216, 173, 99, 0.1) 0%, transparent 70%);
+}
+
+.tag-arco {
+    color: var(--text-muted);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.banner-final-conteudo h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(38px, 4.5vw, 56px);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 1100px) {
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .secao-dupla {
+        grid-template-columns: 1fr;
+    }
+
+    .dupla-imagem-central {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .familias-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .familia-item:nth-child(3)::after {
+        display: none;
+    }
+
+    .banner-destaque-split {
+        grid-template-columns: 1fr;
+    }
+
+    .split-col-img {
+        min-height: 320px;
+    }
+
+    .split-texto-conteudo {
+        padding: 50px 8%;
+    }
+}
+
+@media (max-width: 520px) {
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .familias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .familia-item:nth-child(2n)::after {
+        display: none;
+    }
+}

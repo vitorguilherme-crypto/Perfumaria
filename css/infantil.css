@@ -1,0 +1,1214 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #020d17;
+    color: #eee7dc;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================================
+   LINHAS DIVISÓRIAS ENTRE AS SEÇÕES
+========================================================= */
+
+.hero,
+.familias,
+.fragrancias,
+.universo-infantil,
+.ingredientes,
+.faixa-final {
+    border-bottom: 1px solid rgba(216, 173, 99, 0.55);
+}
+
+
+/* =========================================
+   HERO / PARTE PRINCIPAL
+========================================= */
+
+.hero {
+    min-height: 700px;
+    width: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 40px 80px;
+
+    background: #020d17;
+}
+
+
+/* IMAGEM DO HERO */
+
+.hero-imagem {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: right center;
+
+    display: block;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   TEXTO DO HERO
+========================================= */
+
+.hero-text {
+    width: 560px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* PEQUENO TÍTULO */
+
+.categoria {
+    color: #03111d;
+
+    font-size: 14px;
+    letter-spacing: 5px;
+
+    margin-bottom: 22px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.hero h1 {
+    color: #03111d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 82px;
+    font-weight: 400;
+
+    line-height: 1.02;
+
+    margin-bottom: 25px;
+}
+
+
+/* PALAVRA DOURADA */
+
+.hero h1 span {
+    color: #d8ad63;
+
+    font-style: italic;
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao {
+    width: 500px;
+
+    color: #03111d;
+
+    font-size: 20px;
+
+    line-height: 1.65;
+
+    margin-bottom: 32px;
+}
+
+
+/* =========================================
+   BOTÃO DO HERO
+========================================= */
+
+.hero .botao {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    border: 1px solid #03111d;
+
+    color: #03111d;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.hero .botao:hover {
+    background-color: #03111d;
+
+    color: #eaeff5;
+}
+
+
+/* =========================================
+   FAMÍLIAS OLFATIVAS
+========================================= */
+
+.familias {
+    width: 100%;
+    height: 180px;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    align-items: center;
+    justify-items: center;
+
+    padding: 20px 40px;
+
+    background: #03111d;
+
+    border-top: 1px solid rgba(216, 173, 99, 0.45);
+    border-bottom: 1px solid rgba(216, 173, 99, 0.45);
+}
+
+
+/* CADA FAMÍLIA */
+
+.familia {
+    width: 100%;
+    height: 110px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* ÍCONE SEM FUNDO */
+
+.familia img {
+    width: 72px;
+    height: 72px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* NOME DA FAMÍLIA */
+
+.familia span {
+    color: #d8ad63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+
+/* HOVER */
+
+.familia:hover {
+    transform: translateY(-5px);
+}
+
+.familia:hover img {
+    transform: scale(1.08);
+}
+
+
+/* DIVISÓRIA ENTRE ÍCONES */
+
+.familia + .familia {
+    border-left: 1px solid rgba(216, 173, 99, 0.30);
+
+    padding-left: 20px;
+}
+
+
+/* =========================================
+   SEÇÃO DE FRAGRÂNCIAS
+========================================= */
+
+.fragrancias {
+    width: 100%;
+
+    background-color: #061522;
+
+    padding: 75px 55px 85px;
+
+    position: relative;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho-fragrancias {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 38px;
+}
+
+
+.titulo-secao {
+    text-align: left;
+
+    margin: 0;
+}
+
+
+.titulo-secao p {
+    color: #d8ad63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    margin: 0 0 10px;
+}
+
+
+.titulo-secao h2 {
+    color: #f2e6d2;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   VER TODAS
+========================================= */
+
+.ver-todas {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #d8ad63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+
+.ver-todas span {
+    font-size: 21px;
+
+    line-height: 10px;
+}
+
+
+.ver-todas:hover {
+    color: #f2e6d2;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   GRID DOS PRODUTOS
+========================================= */
+
+.produtos-fragrancias {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   CARD DO PERFUME
+========================================= */
+
+.card-perfume {
+    min-width: 0;
+
+    background-color: #071724;
+
+    border: 1px solid rgba(216, 173, 99, 0.38);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: 0.35s ease;
+
+    position: relative;
+}
+
+
+.card-perfume:hover {
+    border-color: #d8ad63;
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   IMAGEM DO PERFUME
+========================================= */
+
+.imagem-perfume {
+    width: 100%;
+
+    height: 210px;
+
+    overflow: hidden;
+
+    background-color: #091a28;
+}
+
+
+.imagem-perfume img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.card-perfume:hover .imagem-perfume img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.info-perfume {
+    min-height: 190px;
+
+    padding: 18px 16px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* NOME */
+
+.info-perfume h3 {
+    color: #eee7dc;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+
+/* FAMÍLIA */
+
+.familia-perfume {
+    color: #d8ad63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    margin: 7px 0 13px;
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao-perfume {
+    color: #c9c6bf;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   PREÇO + BOTÃO
+========================================= */
+
+.rodape-card {
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.rodape-card strong {
+    color: #eee7dc;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+
+/* BOTÃO REDONDO */
+
+.botao-perfume {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(216, 173, 99, 0.75);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #d8ad63;
+
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+
+.botao-perfume:hover {
+    background-color: #d8ad63;
+
+    color: #061522;
+}
+
+
+
+.universo-infantil {
+    width: 100%;
+    height: 370px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   UNIVERSO INFANTIL — IMAGEM ÚNICA COM TRANSIÇÃO SUAVE
+========================================================= */
+
+.universo-infantil {
+    width: 100%;
+    min-height: 390px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background: #f4ecdf;
+}
+
+/* A imagem já contém a menina, o desfoque e o fundo bege */
+.universo-fundo-unico {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Texto sobre a área bege */
+.universo-texto {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin-left: 50%;
+    min-height: 390px;
+    padding: 35px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.universo-texto .mini-titulo {
+    color: #162c3b;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 0 0 12px;
+}
+
+.universo-texto h2 {
+    color: #10283a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0 0 18px;
+}
+
+.universo-texto h2 span {
+    color: #b87932;
+    font-style: italic;
+}
+
+.descricao-universo {
+    color: #3e4648;
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0 0 22px;
+}
+
+.botao-universo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 22px;
+    border: 1px solid #263b46;
+    color: #263b46;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.botao-universo span {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.botao-universo:hover {
+    background-color: #263b46;
+    color: #f4ecdf;
+}
+
+/* =========================================================
+   A ARTE DA PERFUMARIA
+========================================================= */
+
+/* =========================================================
+   A ARTE DA PERFUMARIA
+========================================================= */
+
+/* =========================================================
+   A ARTE DA PERFUMARIA
+========================================================= */
+
+.ingredientes {
+width: 100%;
+height: 450px;
+position: relative;
+overflow: hidden;
+margin: 0;
+padding: 0;
+}
+
+.ingredientes-imagem {
+position: absolute;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+.ingredientes-imagem img {
+width: 100%;
+height: 100%;
+display: block;
+object-fit: cover;
+object-position: center center;
+}
+
+
+
+
+/* TEXTO SOBRE A ÁREA ESCURECIDA DA PRÓPRIA IMAGEM */
+
+.ingredientes-texto {
+    position: absolute;
+    z-index: 2;
+
+    left: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42%;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.ingredientes-texto .mini-titulo {
+    color: #d8ad63;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin: 0 0 12px;
+}
+
+.ingredientes-texto h2 {
+    color: #f2e6d2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.08;
+    margin: 0 0 16px;
+}
+
+.descricao-ingredientes {
+    color: #e0dbd2;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 0 0 20px;
+}
+
+.botao-ingredientes {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 11px 21px;
+
+    border: 1px solid #d8ad63;
+
+    color: #d8ad63;
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.botao-ingredientes span {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.botao-ingredientes:hover {
+    background: #d8ad63;
+    color: #031522;
+}
+
+
+
+
+/* =========================================================
+   ESSÊNCIA / FAIXA FINAL
+========================================================= */
+
+.faixa-final {
+    width: 100%;
+    height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   IMAGEM DE FUNDO
+========================================================= */
+
+.faixa-final-imagem {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   CONTEÚDO CENTRAL
+========================================================= */
+
+.faixa-final-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.faixa-final-conteudo h2 {
+    color: #f5ead8;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin: 0 0 18px 0;
+
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/* PARTE DOURADA */
+
+.faixa-final-conteudo h2 span {
+    color: #d8ad63;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+.botao-final {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 10px 20px;
+
+    border: 1px solid #d8ad63;
+
+    color: #d8ad63;
+
+    background: rgba(2, 13, 23, 0.15);
+
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.botao-final span {
+    font-size: 16px;
+
+    line-height: 1;
+}
+
+.botao-final:hover {
+    background: #d8ad63;
+
+    color: #031522;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .hero h1 {
+        font-size: 72px;
+    }
+
+    .produtos-fragrancias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .familias {
+        height: 170px;
+    }
+
+    .texto-momentos {
+        padding: 55px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .universo-infantil {
+        min-height: 340px;
+    }
+
+    .universo-texto {
+        min-height: 340px;
+        width: 52%;
+        margin-left: 48%;
+        padding: 28px 25px;
+    }
+
+    .universo-texto h2 {
+        font-size: 36px;
+    }
+
+    .descricao-universo {
+        font-size: 13px;
+    }
+
+
+    .hero {
+        min-height: 650px;
+
+        padding: 40px;
+    }
+
+    .hero-text {
+        width: 55%;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .descricao {
+        width: 100%;
+
+        font-size: 17px;
+    }
+
+    .familias {
+        grid-template-columns: repeat(5, 1fr);
+
+        padding: 15px;
+    }
+
+    .familia img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .familia span {
+        font-size: 10px;
+    }
+
+    .momentos {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-momentos {
+        min-height: 400px;
+    }
+
+    .texto-momentos {
+        padding: 60px 10%;
+    }
+
+    .essencia-texto {
+        margin-left: 8%;
+
+        width: 55%;
+    }
+
+    .essencia-logo {
+        right: 5%;
+
+        width: 28%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .universo-infantil {
+        min-height: 560px;
+        align-items: flex-end;
+    }
+
+    .universo-fundo-unico {
+        object-position: 30% center;
+    }
+
+    .universo-texto {
+        width: 100%;
+        min-height: auto;
+        margin-left: 0;
+        padding: 28px 24px 32px;
+        background: linear-gradient(
+            to bottom,
+            rgba(244, 236, 223, 0.90),
+            rgba(244, 236, 223, 0.98)
+        );
+    }
+
+    .universo-texto h2 {
+        font-size: 36px;
+    }
+
+    .descricao-universo {
+        font-size: 13px;
+    }
+
+
+    .hero {
+        min-height: 620px;
+
+        padding: 35px 25px;
+    }
+
+    .hero-imagem {
+        object-position: 65% center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            to right,
+            rgba(2, 13, 23, 0.95) 0%,
+            rgba(2, 13, 23, 0.70) 55%,
+            rgba(2, 13, 23, 0.35) 100%
+        );
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+
+    /* FAMÍLIAS */
+
+    .familias {
+        height: auto;
+
+        grid-template-columns: repeat(5, 1fr);
+
+        padding: 20px 5px;
+    }
+
+    .familia {
+        height: 90px;
+
+        gap: 8px;
+    }
+
+    .familia img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .familia span {
+        font-size: 8px;
+
+        letter-spacing: 1px;
+    }
+
+    .familia + .familia {
+        padding-left: 5px;
+    }
+
+
+    /* PRODUTOS */
+
+    .fragrancias {
+        padding: 55px 20px;
+    }
+
+    .produtos-fragrancias {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .cabecalho-fragrancias {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 28px;
+    }
+
+
+    /* MOMENTOS */
+
+    .texto-momentos {
+        padding: 50px 25px;
+    }
+
+    .texto-momentos h2 {
+        font-size: 38px;
+    }
+
+
+    /* ESSÊNCIA */
+
+    .essencia {
+        min-height: 600px;
+
+        padding: 60px 25px;
+    }
+
+    .essencia-texto {
+        margin-left: 0;
+
+        width: 70%;
+    }
+
+    .essencia h2 {
+        font-size: 38px;
+    }
+
+    .essencia-logo {
+        right: 5%;
+
+        width: 25%;
+    }
+
+    .essencia-logo-nome {
+        font-size: 18px;
+    }
+
+    .essencia-logo-sub {
+        font-size: 7px;
+    }
+}

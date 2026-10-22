@@ -1,0 +1,985 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #020d17;
+    color: #eee7dc;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* =========================================
+   HERO / PARTE PRINCIPAL
+========================================= */
+
+/* =========================================
+   HERO / PARTE PRINCIPAL
+========================================= */
+
+.hero {
+    min-height: 700px; /* Aumentado para manter a proporção correta em ecrãs largos */
+    width: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 40px 80px;
+
+    background: #020d17;
+}
+
+.hero-imagem {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+
+    object-fit: cover;
+    object-position: right top; /* Alinha o recorte pelo topo e pela direita */
+
+    display: block;
+
+    z-index: 0;
+}
+
+/* =========================================
+   ESCURECIMENTO DA IMAGEM
+========================================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(2, 13, 23, 0.98) 0%,
+        rgba(2, 13, 23, 0.88) 18%,
+        rgba(2, 13, 23, 0.60) 35%,
+        rgba(2, 13, 23, 0.20) 58%,
+        rgba(2, 13, 23, 0.02) 100%
+    );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   TEXTO DO HERO
+========================================= */
+
+.hero-text {
+    width: 500px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.categoria {
+    color: #d8ad63;
+
+    font-size: 13px;
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    color: #f2e6d2;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 90px;
+    font-weight: 400;
+
+    line-height: 1.00;
+
+    margin-bottom: 22px;
+}
+
+
+.hero h1 span {
+    color: #d8ad63;
+
+    font-style: italic;
+}
+
+
+.descricao {
+    width: 410px;
+
+    color: #c7c2ba;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    margin-bottom: 27px;
+}
+
+
+/* =========================================
+   BOTÃO DO HERO
+========================================= */
+
+.hero .botao {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    border: 1px solid #d8ad63;
+
+    color: #d8ad63;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+
+.hero .botao:hover {
+    background-color: #d8ad63;
+
+    color: #020d17;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.hero .botao {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border: 1px solid #d8ad63;
+
+    color: #d8ad63;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+
+.hero .botao:hover {
+    background-color: #d8ad63;
+
+    color: #020d17;
+}
+
+
+/* =========================================
+   FAMÍLIAS OLFATIVAS
+========================================= */
+
+/* ==========================================
+   FAMÍLIAS OLFATIVAS
+========================================== */
+
+/* =========================================
+   FAMÍLIAS OLFATIVAS
+========================================= */
+
+.familias {
+    width: 100%;
+    height: 120px;
+
+    display: grid !important;
+
+    grid-template-columns: repeat(5, 1fr) !important;
+
+    align-items: center;
+    justify-items: center;
+
+    padding: 15px 40px;
+
+    background: #03111d;
+
+    border-top: 1px solid rgba(216, 173, 99, 0.45);
+    border-bottom: 1px solid rgba(216, 173, 99, 0.45);
+}
+
+
+.familia {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition: transform 0.3s ease;
+}
+
+
+.familia img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+
+.familia span {
+    color: #d8ad63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+
+.familia:hover {
+    transform: translateY(-4px);
+}
+
+
+.familia:hover img {
+    transform: scale(1.08);
+}
+
+
+.familia + .familia {
+    border-left: 1px solid rgba(216, 173, 99, 0.30);
+
+    padding-left: 20px;
+}
+
+
+/* =========================================
+   SEÇÃO DE FRAGRÂNCIAS
+========================================= */
+
+/* =========================================
+   SEÇÃO DE FRAGRÂNCIAS
+========================================= */
+
+.fragrancias {
+    width: 100%;
+
+    background-color: #061522;
+
+    padding: 75px 55px 85px;
+
+    position: relative;
+}
+
+
+/* =========================================
+   CABEÇALHO DA SEÇÃO
+========================================= */
+
+.cabecalho-fragrancias {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 38px;
+}
+
+
+.titulo-secao {
+    text-align: left;
+
+    margin: 0;
+}
+
+
+.titulo-secao p {
+    color: #d8ad63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    margin: 0 0 10px;
+}
+
+
+.titulo-secao h2 {
+    color: #f2e6d2;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   BOTÃO VER TODAS
+========================================= */
+
+.ver-todas {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #d8ad63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.ver-todas span {
+    font-size: 21px;
+
+    line-height: 10px;
+}
+
+
+.ver-todas:hover {
+    color: #f2e6d2;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   ÁREA DOS CARDS
+========================================= */
+
+.produtos-fragrancias {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   CARD DO PERFUME
+========================================= */
+
+.card-perfume {
+    min-width: 0;
+
+    background-color: #071724;
+
+    border: 1px solid rgba(216, 173, 99, 0.38);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: 0.35s ease;
+
+    position: relative;
+}
+
+
+.card-perfume:hover {
+    border-color: #d8ad63;
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   IMAGEM DO PERFUME
+========================================= */
+
+.imagem-perfume {
+    width: 100%;
+
+    height: 210px;
+
+    overflow: hidden;
+
+    background-color: #091a28;
+}
+
+
+.imagem-perfume img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.card-perfume:hover .imagem-perfume img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   INFORMAÇÕES DO PERFUME
+========================================= */
+
+.info-perfume {
+    min-height: 185px;
+
+    padding: 18px 16px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* NOME */
+
+.info-perfume h3 {
+    color: #eee7dc;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+
+/* FAMÍLIA OLFATIVA */
+
+.familia-perfume {
+    color: #d8ad63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    margin: 7px 0 13px;
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao-perfume {
+    color: #c9c6bf;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   PREÇO + BOTÃO
+========================================= */
+
+.rodape-card {
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.rodape-card strong {
+    color: #eee7dc;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   BOTÃO REDONDO DO CARD
+========================================= */
+
+.botao-perfume {
+    width: 30px;
+
+    height: 30px;
+
+    border: 1px solid rgba(216, 173, 99, 0.75);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #d8ad63;
+
+    font-size: 17px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.botao-perfume:hover {
+    background-color: #d8ad63;
+
+    color: #061522;
+}
+
+
+/* =========================================
+   LINHA COMPLETA
+========================================= */
+
+/* =========================================
+   LINHA COMPLETA
+========================================= */
+
+.linha-completa {
+    width: 100%;
+    aspect-ratio: 2063 / 496;      /* mesma proporção da foto terceira.jpg (sem cortes) */
+    min-height: 340px;
+    position: relative;
+    background-color: #020d17;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(2, 13, 23, 0) 0%,
+            rgba(2, 13, 23, 0) 30%,
+            rgba(2, 13, 23, 0.6) 46%,
+            rgba(2, 13, 23, 0.85) 68%,
+            rgba(2, 13, 23, 0.96) 100%
+        ),
+        url('../img/pagina_linha_M/terceira.jpg');   /* ../ porque o CSS está dentro de /css */
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(216, 173, 99, 0.35);
+    border-bottom: 1px solid rgba(216, 173, 99, 0.35);
+}
+
+/* Conteúdo ocupa a largura toda: texto começa depois do frasco (~37%) */
+.linha-completa-conteudo {
+    width: 100%;
+    margin: 0;
+    padding: 40px 5% 40px 40%;
+    display: grid;
+    grid-template-columns: minmax(0, 30fr) minmax(0, 25fr);
+    gap: 0;
+    align-items: center;
+}
+
+/* TEXTO */
+.texto-completa {
+    max-width: 480px;
+    padding-right: 24px;
+}
+
+.subtitulo-completa {
+    color: #d8ad63;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.texto-completa h2 {
+    color: #f2e6d2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(26px, 2.7vw, 44px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.texto-completa h2 span {
+    color: #d8ad63;
+    font-style: italic;
+}
+
+.descricao-completa {
+    color: #d9d4ca;
+    font-family: Arial, sans-serif;
+    font-size: clamp(12px, 1vw, 15px);
+    line-height: 1.7;
+    margin: 0;
+    max-width: 400px;
+}
+
+/* COLUNA DA DIREITA (NOTAS) */
+.complementares {
+    border-left: 1px solid rgba(216, 173, 99, 0.45);
+    padding-left: clamp(20px, 3vw, 48px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2vw, 30px);
+    justify-content: center;
+}
+
+.complementar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icone-circulo {
+    width: clamp(56px, 5.6vw, 88px);
+    height: clamp(56px, 5.6vw, 88px);
+    min-width: clamp(56px, 5.6vw, 88px);
+    border-radius: 50%;
+    border: 1.5px solid rgba(216, 173, 99, 0.55);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #03111d;
+}
+
+.icone-circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Título em cima, descrição embaixo */
+.complementar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.complementar-titulo {
+    color: #d8ad63;
+    font-family: Arial, sans-serif;
+    font-size: clamp(10px, 0.9vw, 13px);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.complementar-desc {
+    color: #eee7dc;
+    font-family: Arial, sans-serif;
+    font-size: clamp(12px, 1.05vw, 15px);
+}
+
+/* TABLET / CELULAR */
+@media (max-width: 1000px) {
+    .linha-completa {
+        aspect-ratio: auto;
+        background-position: 20% center;
+    }
+
+    .linha-completa-conteudo {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 60px 8%;
+        background: rgba(2, 13, 23, 0.72);
+    }
+
+    .texto-completa {
+        max-width: none;
+        padding-right: 0;
+    }
+
+    .complementares {
+        border-left: none;
+        border-top: 1px solid rgba(216, 173, 99, 0.45);
+        padding-left: 0;
+        padding-top: 28px;
+    }
+}
+
+
+/* =========================================
+   DESCUBRA SUA ESSÊNCIA
+========================================= */
+
+/* =========================================
+   DESCUBRA SUA ESSÊNCIA
+========================================= */
+
+.essencia {
+    width: 100%;
+    height: 350px;
+    min-height: 350px;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 42% 34% 24%;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background-color: #020d17;
+
+    border-top: 1px solid rgba(216, 173, 99, 0.35);
+}
+
+
+/* =========================================
+   IMAGEM DAS FLORES — FUNDO
+========================================= */
+
+.essencia-imagem {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+
+    width: auto;
+    height: auto;
+
+    overflow: hidden;
+
+    display: block;
+
+    z-index: 1;
+}
+
+
+/* imagem */
+
+.essencia-imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter: brightness(1);
+    opacity: 0.5;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.35) 8%,
+        #000 20%,
+        #000 85%,
+        rgba(0, 0, 0, 0.75) 95%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.35) 8%,
+        #000 20%,
+        #000 85%,
+        rgba(0, 0, 0, 0.75) 95%,
+        transparent 100%
+    );
+}
+
+
+/* =========================================
+   TEXTO — LADO ESQUERDO
+========================================= */
+
+.essencia-texto {
+    position: relative;
+
+    z-index: 3;
+
+    grid-column: 1;
+
+    padding-left: 80px;
+    padding-right: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.essencia h2 {
+    color: #f2e6d2;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 43px;
+    font-weight: 400;
+
+    line-height: 1.12;
+
+    margin: 0 0 30px;
+}
+
+
+.essencia h2 span {
+    color: #d8ad63;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.essencia .botao {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border: 1px solid #d8ad63;
+
+    color: #d8ad63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+
+.essencia .botao:hover {
+    background-color: #d8ad63;
+
+    color: #020d17;
+}
+
+
+/* =========================================
+   LOGO — FRENTE DAS FLORES
+========================================= */
+
+.essencia-logo {
+    position: relative;
+
+    z-index: 4;
+
+    grid-column: 3;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+.essencia-logo img {
+    width: 400px;
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
